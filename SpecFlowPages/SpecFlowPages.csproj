@@ -54,6 +54,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Pages\ContactPage.cs" />
+    <Compile Include="Pages\LandingPage.cs" />
+    <Compile Include="Pages\CustomerSupportPage.cs" />
     <Compile Include="Utils\ConstantsUtils.cs" />
     <Compile Include="Utils\Driver.cs" />
     <Compile Include="Pages\NavigateToSpecFlowExcel.cs" />

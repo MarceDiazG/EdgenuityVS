@@ -23,7 +23,7 @@ namespace SpecFlowTests.AcceptanceTests
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "NavigateSpecfFlowExcel.feature"
+#line 1 "ContactFormInvalidData.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
@@ -77,13 +77,13 @@ namespace SpecFlowTests.AcceptanceTests
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given("the specflow page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("an user that visit our landing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.When("I press Specflow+", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the user clicks on support button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
  testRunner.And("Specflow+-Excel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.Then("I\'m able to see \'Get Started Now with SpecFlow+ Excel!\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the support page is displayed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

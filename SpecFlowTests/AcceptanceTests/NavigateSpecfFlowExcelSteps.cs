@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SpecFlowPages;
+using SpecFlowPages.Pages;
+using System;
 using TechTalk.SpecFlow;
 
 namespace SpecFlowTests
@@ -7,29 +9,26 @@ namespace SpecFlowTests
     [Binding]
     public class NavigateSpecfFlowExcelSteps : Start
     {        
-        [Given(@"the specflow page")]
-        public void GivenTheSpecflowPage()
-        {
-            
+        [Given(@"an user that visit our landing page")]
+        public void GivenTheSpecflowPage()  {
+            LandinPage.goToContactPage();
+            //NavigateToSpecFlowExcel.ClickSpecflowPlus();
         }
         
-        [When(@"I press Specflow\+")]
-        public void WhenIPressSpecflow()
-        {
-            NavigateToSpecFlowExcel.ClickSpecflowPlus();
+        [When(@"the user clicks on support button")]
+        public void WhenIPressSpecflow() {
+            Assert.IsTrue(
+                ContactPage.isLoad(), "This is not Contact Page!");
         }
         
         [When(@"Specflow\+-Excel")]
-        public void WhenSpecflow_Excel()
-        {
-            NavigateToSpecFlowExcel.ClickSpecflowPlusExcel();
+        public void WhenSpecflow_Excel() {
+            ContactPage.completeFormInvalidData();
         }
         
-        [Then(@"I'(.*)'Get Started Now with SpecFlow\+ Excel!' button")]
-        public void ThenIGetStartedNowWithSpecFlowExcelButton(string p0)
-        {
-            Assert.AreEqual(ConstantsUtils.GetStartedExcelButtonText, 
-                NavigateToSpecFlowExcel.GetButtonGetStartedText());                
+        [Then(@"the support page is displayed successfully")]
+        public void ThenIGetStartedNowWithSpecFlowExcelButton() {
+            Assert.IsTrue(ContactPage.errorStateMsgIsDisplayed());
         }
     }
 }

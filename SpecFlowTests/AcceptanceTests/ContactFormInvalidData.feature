@@ -4,7 +4,7 @@
 	I would like to navigate on the main page of Edgeunity checking some elements
 
 Scenario:  Basic functionality on Edgeunity landing page
-	Given the specflow page	
-	When I press Specflow+
+	Given an user that visit our landing page	
+	When the user clicks on support button
 	And Specflow+-Excel
-	Then I'm able to see 'Get Started Now with SpecFlow+ Excel!' button
+	Then the support page is displayed successfully
