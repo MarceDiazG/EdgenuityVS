@@ -35,11 +35,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="TechTalk.SpecFlow, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.2.2.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
@@ -60,20 +68,30 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AcceptanceTests\NavigateSpecfFlowExcel.feature.cs">
+    <Compile Include="AcceptanceTests\ContactFormInvalidData.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NavigateSpecfFlowExcel.feature</DependentUpon>
+      <DependentUpon>ContactFormInvalidData.feature</DependentUpon>
     </Compile>
     <Compile Include="AcceptanceTests\NavigateSpecfFlowExcelSteps.cs" />
+    <Compile Include="AcceptanceTests\LoginEducator.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginEducator.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\LoginEducatorSteps.cs" />
     <Compile Include="Utils\Start.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="AcceptanceTests\NavigateSpecfFlowExcel.feature">
+    <None Include="AcceptanceTests\LoginEducator.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>NavigateSpecfFlowExcel.feature.cs</LastGenOutput>
+      <LastGenOutput>LoginEducator.feature.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="AcceptanceTests\ContactFormInvalidData.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContactFormInvalidData.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

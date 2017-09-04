@@ -16,3 +16,14 @@ C:\w\Edgenuity\SpecFlowPages\obj\Debug\SpecFlowPages.csprojResolveAssemblyRefere
 C:\w\Edgenuity\SpecFlowPages\obj\Debug\SpecFlowPages.csproj.CoreCompileInputs.cache
 C:\w\Edgenuity\SpecFlowPages\obj\Debug\SpecFlowPages.dll
 C:\w\Edgenuity\SpecFlowPages\obj\Debug\SpecFlowPages.pdb
+C:\w\EdgenuityVS\SpecFlowPages\obj\Debug\SpecFlowPages.csprojResolveAssemblyReference.cache
+C:\w\EdgenuityVS\SpecFlowPages\obj\Debug\SpecFlowPages.csproj.CoreCompileInputs.cache
+C:\w\EdgenuityVS\SpecFlowPages\obj\Debug\SpecFlowPages.dll
+C:\w\EdgenuityVS\SpecFlowPages\obj\Debug\SpecFlowPages.pdb
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\SpecFlowPages.dll
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\SpecFlowPages.pdb
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\WebDriver.dll
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\WebDriver.Support.dll
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\WebDriver.xml
+C:\w\EdgenuityVS\SpecFlowPages\bin\Debug\WebDriver.Support.xml
