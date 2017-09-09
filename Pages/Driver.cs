@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.Threading;
+using System.Net;
 
 namespace EdgeWebDriver
 {
@@ -19,10 +20,11 @@ namespace EdgeWebDriver
             get { return ConstantsUtils.Url; }
         }
 
-        public static void Initialize(BrowserType type)
-        {
-            switch (type)
-            {
+        public static void Initialize(BrowserType type)        {
+            /*WebProxy proxyObject = new WebProxy("10.120.2.251", 3128);
+            WebRequest req = WebRequest.Create("https://auth.qa.edgenuity.com/Login/Login/Educator");
+            req.Proxy = proxyObject;*/
+            switch (type) {
                 case BrowserType.Firefox:
                 driverStore.Value = new FirefoxDriver();
                 break;
@@ -33,7 +35,7 @@ namespace EdgeWebDriver
 
         public static void Navigate()
         {
-            Get().Navigate().GoToUrl(BaseAddress);
+            Get().Navigate().GoToUrl("https://auth.qa.edgenuity.com/Login/Login/Educator"); // BaseAddress);
         }
 
         public static void Close()

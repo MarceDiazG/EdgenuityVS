@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="BasePage.cs" />
     <Compile Include="ContactPage.cs" />
+    <Compile Include="Educator\EducatorLoginPage.cs" />
+    <Compile Include="Educator\EducatorWelcomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,5 +62,6 @@
       <Name>EdgeWebDriver</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
