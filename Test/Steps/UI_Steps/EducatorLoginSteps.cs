@@ -30,7 +30,7 @@ namespace Test.Steps.UI_Steps
         public void ThenValidateThatTheUserWasSuccessfullyLogged()
         {
             bool theBoolean = true;
-            theBoolean.Should().Be(welcomePage.isLoad());
+            theBoolean.Should().Be(welcomePage.IsLoad());
             Console.WriteLine("******> Then ");
             //ScenarioContext.Current.Pending();
         }

@@ -20,12 +20,12 @@ namespace EdgeWebDriver
             get { return ConstantsUtils.Url; }
         }
 
-        public static void Initialize(BrowserType type)        {
+        public static void Initialize(Browsers type)        {
             /*WebProxy proxyObject = new WebProxy("10.120.2.251", 3128);
             WebRequest req = WebRequest.Create("https://auth.qa.edgenuity.com/Login/Login/Educator");
             req.Proxy = proxyObject;*/
             switch (type) {
-                case BrowserType.Firefox:
+                case Browsers.Firefox:
                 driverStore.Value = new FirefoxDriver();
                 break;
             };    

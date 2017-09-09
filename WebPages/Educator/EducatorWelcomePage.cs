@@ -14,14 +14,14 @@ namespace WebPages
 
         #region WebElements
         [FindsBy(How = How.ClassName, Using = "userLoggedIn")]
-        public IWebElement labelLoggedUser { get; private set; }
+        public IWebElement LabelLoggedUser { get; private set; }
 
         [FindsBy(How = How.Id, Using = "nav")]
         public IWebElement NavigationPanel { get; private set; }
         #endregion
 
-        public bool isLoad() {
-            bool labelIsPresent = labelLoggedUser.Displayed;
+        public bool IsLoad() {
+            bool labelIsPresent = LabelLoggedUser.Displayed;
             bool navigationIsPresent = NavigationPanel.Displayed;
             Console.WriteLine("Elements are present?: "+labelIsPresent+"/"+navigationIsPresent);
             return labelIsPresent && navigationIsPresent;

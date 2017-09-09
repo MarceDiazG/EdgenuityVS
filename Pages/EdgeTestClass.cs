@@ -13,7 +13,7 @@ namespace EdgeWebDriver
         [BeforeScenario]
         public void SetUp()
         {
-            Driver.Initialize(BrowserType.Firefox);
+            Driver.Initialize(Browsers.Firefox);
         }
 
         [AfterScenario]
