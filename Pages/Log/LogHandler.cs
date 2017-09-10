@@ -6,9 +6,9 @@ using log4net.Core;
 using System;
 using System.Configuration;
 using System.IO;
-using Pages.Enums;
+using EdgeWebDriver.Enums;
 
-namespace Pages.Log {
+namespace EdgeWebDriver.Log {
     /// <summary>
     /// LogHandler handles the logging configuration for the test automation project by configuring a file appender 
     /// to save every actions that happens in the test.

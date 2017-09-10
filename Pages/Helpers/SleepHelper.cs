@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Pages.Helpers
+namespace EdgeWebDriver.Helpers
 {
     /// <summary>
     /// SleepHelper is a helper class to manage sleeps in the current thread execution.

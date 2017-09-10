@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pages.Enums
+namespace EdgeWebDriver.Enums
 {
     /// <summary>
     /// Role types to test different privilegies.
