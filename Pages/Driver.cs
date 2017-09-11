@@ -6,7 +6,7 @@ using System.Net;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.PhantomJS;
-using EdgeWebDriver.Environment;
+using DB_Layer;
 
 namespace EdgeWebDriver
 {
@@ -53,7 +53,7 @@ namespace EdgeWebDriver
 
         public static void Navigate()
         {
-            Get().Navigate().GoToUrl(EnvironmentReader.getEnvironmentURL("QA_Educator"));
+            Get().Navigate().GoToUrl(DataAccess.getEnvironmentURL("QA_Educator"));
         }
 
         public static void Close()

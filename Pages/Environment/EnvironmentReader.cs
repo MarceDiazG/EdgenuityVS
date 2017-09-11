@@ -80,19 +80,6 @@ namespace EdgeWebDriver.Environment
             return Browsers.Chrome;
         }
 
-        public static string getEnvironmentURL(string portal){
-            switch (portal)
-            {
-                case "QA_Educator":
-                    return "https://auth.qa.edgenuity.com/Login/Login/Educator";
-                case "QA_Student":
-                    return "https://auth.qa.edgenuity.com/Login/Login/Student";
-                case "QA_Family":
-                    return "https://auth.qa.edgenuity.com/Login/Login/family";
-                case "QA_CompassLearning":
-                    return "https://qaodypublic.compasslearning.com";
-            }
-            return null;
-        }
+        
     }
 }

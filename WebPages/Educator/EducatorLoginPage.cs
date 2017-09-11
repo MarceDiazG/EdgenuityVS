@@ -7,6 +7,8 @@ using EdgeWebDriver;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using EdgeWebDriver.Environment;
+using DB_Layer;
 
 namespace WebPages {
     public class EducatorLoginPage : BasePage {
@@ -28,8 +30,8 @@ namespace WebPages {
         public IWebElement BtnLogin { get; private set; }
         #endregion
 
-        public void GoToEducatorPortal(){
-            GoToSite("https://auth.qa.edgenuity.com/Login/Login/Educator");
+        public void GoToEducatorPortal(string portal){
+            GoToSite(DataAccess.getEnvironmentURL(portal));
         }
 
         /// <summary>

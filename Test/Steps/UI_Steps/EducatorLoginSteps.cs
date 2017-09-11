@@ -2,6 +2,7 @@
 using TechTalk.SpecFlow;
 using WebPages;
 using FluentAssertions;
+using DB_Layer;
 
 namespace Test.Steps.UI_Steps
 {
@@ -11,15 +12,17 @@ namespace Test.Steps.UI_Steps
         EducatorLoginPage loginPage;
         EducatorWelcomePage welcomePage;
 
-        [Given(@"Going to Educator Portal")]
-        public void GivenGoingToEducatorPortal()
+        [Given(@"Going to (.*) Portal")]
+        public void GivenGoingToEducatorPortal(string portal)
         {
+            Console.WriteLine("+++++ > portal");
+            Console.WriteLine("My data:" + DataAccess.GetEducatorUsername("marcelo"));
             loginPage = new EducatorLoginPage();
                 //PageFactoryHelper.GetPage<LoginPage>();
-            loginPage.GoToEducatorPortal();
+            loginPage.GoToEducatorPortal(portal);
         }
         
-        [When(@"Login with (.*) and (.*)")]
+        [When(@"Login with (.*) and (.*) credentials")]
         public void WhenLoginWithUsernameAndPassword(string username, string password)
         {
             Console.WriteLine("******> When ");

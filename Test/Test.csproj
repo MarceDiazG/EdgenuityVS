@@ -100,6 +100,10 @@
       <Project>{9103eaf6-3b98-43a7-ad4f-7f2d17ab86af}</Project>
       <Name>API_Layer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DB_Layer\DB_Layer.csproj">
+      <Project>{43bec2aa-88db-4468-a930-4f48aaee7e39}</Project>
+      <Name>DB_Layer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pages\EdgeWebDriver.csproj">
       <Project>{DBC05EBF-C430-4937-BB7B-822A59174F4B}</Project>
       <Name>EdgeWebDriver</Name>

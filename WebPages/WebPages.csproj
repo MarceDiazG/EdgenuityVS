@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DB_Layer\DB_Layer.csproj">
+      <Project>{43bec2aa-88db-4468-a930-4f48aaee7e39}</Project>
+      <Name>DB_Layer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pages\EdgeWebDriver.csproj">
       <Project>{dbc05ebf-c430-4937-bb7b-822a59174f4b}</Project>
       <Name>EdgeWebDriver</Name>
