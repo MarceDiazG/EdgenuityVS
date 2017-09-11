@@ -6,5 +6,5 @@
 @mytag
 Scenario: Succesfull Educator login
 	Given Going to QA_Educator Portal
-	When Login with marceloTeach and marcelo credentials
+	When Login with chetanTeach and chetan credentials
 	Then validate that the user was successfully logged

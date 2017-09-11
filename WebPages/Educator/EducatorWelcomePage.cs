@@ -9,22 +9,45 @@ using System.Threading.Tasks;
 namespace WebPages
 {
     public class EducatorWelcomePage: BasePage    {
+        
+
         public EducatorWelcomePage() {
         }
 
-        #region WebElements
-        [FindsBy(How = How.ClassName, Using = "userLoggedIn")]
-        public IWebElement LabelLoggedUser { get; private set; }
+        private EdgenuityHeader edgenuityHeader = null;
+        public EdgenuityHeader EHeader
 
-        [FindsBy(How = How.Id, Using = "nav")]
-        public IWebElement NavigationPanel { get; private set; }
-        #endregion
+        {
+            get { return edgenuityHeader ?? (edgenuityHeader = new EdgenuityHeader()); }
+        }
+
+        private UserLoggedPopUp userLogged = null;
+        public UserLoggedPopUp UserLogged
+
+        {
+            get { return userLogged ?? (userLogged = new UserLoggedPopUp()); }
+        }
 
         public bool IsLoad() {
-            bool labelIsPresent = LabelLoggedUser.Displayed;
-            bool navigationIsPresent = NavigationPanel.Displayed;
+
+            CloseIfIsShowedPopUpOpenedSession();
+         
+            bool labelIsPresent = EHeader.LabelLoggedUser.Displayed;
+            bool navigationIsPresent = EHeader.NavigationPanel.Displayed;
             Console.WriteLine("Elements are present?: "+labelIsPresent+"/"+navigationIsPresent);
             return labelIsPresent && navigationIsPresent;
+        }
+        public static bool CloseIfIsShowedPopUpOpenedSession(){
+            try {
+                IWebElement buttonContinueIsLoggedUser = driver.FindElement(By.Name("continue"));
+                buttonContinueIsLoggedUser.Click();
+                Console.WriteLine("Closed popup 'Is Logged the user' successfully!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The popup 'Is Logged the user' was NOT showed!");
+            }
+            return true;
         }
     }
 }

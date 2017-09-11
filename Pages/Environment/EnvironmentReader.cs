@@ -51,7 +51,6 @@ namespace EdgeWebDriver.Environment
         /// <returns>the config value for the key passed as paramter</returns>
         private static String GetConfig(String key)
         {
-
             var config = System.Environment.GetEnvironmentVariable(key);
             if (config != null && config.Length > 0)
             {

@@ -7,7 +7,6 @@ using EdgeWebDriver;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using EdgeWebDriver.Environment;
 using DB_Layer;
 
 namespace WebPages {
@@ -50,6 +49,7 @@ namespace WebPages {
         /// <param name="Username"></param>
         public void EnterUserName(string Username)
         {
+            //Wait until the element is clickable/visible or use the findelement inside the method
             IWebElement txt = driver.FindElement(By.Id("LoginUsername"));
             txt.SendKeys(Username);
         }
@@ -71,7 +71,6 @@ namespace WebPages {
         /// <returns></returns>
         public EducatorWelcomePage Login(string username, string password)
         {
-            Console.WriteLine("USername: "+username+"; Password: "+password);
             EnterUserName(username);
             EnterPassword(password);
             ClickLogin();

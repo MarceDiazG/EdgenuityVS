@@ -81,7 +81,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.Given("Going to QA_Educator Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("Login with marceloTeach and marcelo credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Login with chetanTeach and chetan credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then("validate that the user was successfully logged", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

@@ -17,7 +17,6 @@ namespace WebPages
 
         public void GoToSite(string WebUrl){
             Driver.Get().Navigate().GoToUrl(WebUrl);
-
         }
     }
 }
