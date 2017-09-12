@@ -58,18 +58,30 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\API_Steps\ValidateAPISteps.cs" />
+    <Compile Include="Steps\UI_Steps\Compass\CompassLearningLoginSteps.cs" />
     <Compile Include="Steps\UI_Steps\ContactPageSteps.cs" />
     <Compile Include="Steps\UI_Steps\Educator\EducatorLoginSteps.cs" />
+    <Compile Include="Steps\UI_Steps\Family\FamilyLoginSteps.cs" />
     <Compile Include="Steps\UI_Steps\Student\StudentLoginSteps.cs" />
     <Compile Include="Stories\API_Features\ValidateAPIFeature.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidateAPIFeature.feature</DependentUpon>
     </Compile>
+    <Compile Include="Stories\UI_Features\Compass\CompassLearningLogin.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompassLearningLogin.feature</DependentUpon>
+    </Compile>
     <Compile Include="Stories\UI_Features\Educator\EducatorLogin.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EducatorLogin.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Stories\UI_Features\Family\FamilyLogin.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FamilyLogin.feature</DependentUpon>
     </Compile>
     <Compile Include="Stories\UI_Features\Student\StudentLogin.feature.cs">
       <AutoGen>True</AutoGen>
@@ -88,9 +100,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ValidateAPIFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="Stories\UI_Features\Compass\CompassLearningLogin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CompassLearningLogin.feature.cs</LastGenOutput>
+    </None>
     <None Include="Stories\UI_Features\Educator\EducatorLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EducatorLogin.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Stories\UI_Features\Family\FamilyLogin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FamilyLogin.feature.cs</LastGenOutput>
     </None>
     <None Include="Stories\UI_Features\Student\StudentLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

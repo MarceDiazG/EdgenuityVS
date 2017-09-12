@@ -7,7 +7,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace WebPages
 {
-    public class BasePage    {
+    public abstract class BasePage    {
         protected static IWebDriver driver;
 
         protected BasePage(){

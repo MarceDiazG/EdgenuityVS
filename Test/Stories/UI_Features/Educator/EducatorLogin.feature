@@ -3,7 +3,7 @@
 	As a Educator role
 	I want to login in Educator Portal 
 
-@mytag
+@educator
 Scenario: Succesfull Educator login and logout
 	Given Going to QA_Educator Portal
 	When Login with chetanTeach and chetan credentials
@@ -11,7 +11,7 @@ Scenario: Succesfull Educator login and logout
 	When user clicks on signout link
 	Then validate that user is signed out and is directed to login page.
 
-@mytag2
+@educator
 Scenario: Verify 2 reviews pending for user Marcelo
 	Given Going to QA_Educator Portal
 	When Login with marceloTeach and marcelo credentials

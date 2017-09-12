@@ -71,11 +71,11 @@ namespace Test.Stories.UI_Features.Educator
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Succesfull Educator login and logout")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "EducatorLogin")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("educator")]
         public virtual void SuccesfullEducatorLoginAndLogout()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succesfull Educator login and logout", new string[] {
-                        "mytag"});
+                        "educator"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -95,11 +95,11 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify 2 reviews pending for user Marcelo")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "EducatorLogin")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("educator")]
         public virtual void Verify2ReviewsPendingForUserMarcelo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify 2 reviews pending for user Marcelo", new string[] {
-                        "mytag2"});
+                        "educator"});
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 16
