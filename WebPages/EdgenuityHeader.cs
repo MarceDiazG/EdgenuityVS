@@ -14,7 +14,7 @@ namespace WebPages
             
     }
         #region WebElements
-        [FindsBy(How = How.ClassName, Using = "userLoggedIn")]
+        [FindsBy(How = How.CssSelector, Using = "#ctl00_conBody_pnlMain > h1")]
         public IWebElement LabelLoggedUser { get; private set; }
 
         [FindsBy(How = How.Id, Using = "nav")]

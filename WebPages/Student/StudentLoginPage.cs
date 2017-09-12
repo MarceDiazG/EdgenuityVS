@@ -10,12 +10,12 @@ using OpenQA.Selenium.Support.PageObjects;
 using DB_Layer;
 
 namespace WebPages {
-    public class EducatorLoginPage : BasePage {
+    public class StudentLoginPage : BasePage {
         
         /// <summary>
         /// Default constructor for EducatorLoginPage
         /// </summary>
-        public EducatorLoginPage() {
+        public StudentLoginPage() {
         }
 
         #region WebElements
@@ -29,7 +29,7 @@ namespace WebPages {
         public IWebElement BtnLogin { get; private set; }
         #endregion
 
-        public void GoToEducatorPortal(string portal){
+        public void GoToStudentPortal(string portal){
             GoToSite(DataAccess.getEnvironmentURL(portal));
         }
 
@@ -37,7 +37,7 @@ namespace WebPages {
         /// Click on Login Button
         /// </summary>
         /// <returns></returns>
-        public EducatorLoginPage ClickLogin()
+        public StudentLoginPage ClickLogin()
         {
             BtnLogin.Click();
             return this;
@@ -69,13 +69,13 @@ namespace WebPages {
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public EducatorWelcomePage Login(string username, string password)
+        public StudentWelcomePage Login(string username, string password)
         {
             EnterUserName(username);
             EnterPassword(password);
             ClickLogin();
             CloseIfIsShowedPopUpOpenedSession();
-            return new EducatorWelcomePage();
+            return new StudentWelcomePage();
         }
 
         public bool IsLoad(IWebElement element) {

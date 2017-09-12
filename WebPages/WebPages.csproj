@@ -52,6 +52,8 @@
     <Compile Include="EdgenuityHeader.cs" />
     <Compile Include="Educator\EducatorLoginPage.cs" />
     <Compile Include="Educator\EducatorWelcomePage.cs" />
+    <Compile Include="Student\StudentWelcomePage.cs" />
+    <Compile Include="Student\StudentLoginPage.cs" />
     <Compile Include="UserLoggedPopUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
