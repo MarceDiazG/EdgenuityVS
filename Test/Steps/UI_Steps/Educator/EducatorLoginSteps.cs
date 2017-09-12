@@ -16,7 +16,7 @@ namespace Test.Steps.UI_Steps
         public void GivenGoingToEducatorPortal(string portal)
         {
             Console.WriteLine("+++++ > portal");
-            Console.WriteLine("My data:" + DataAccess.GetEducatorUsername("marcelo"));
+            //Console.WriteLine("My data:" + DataAccess.GetEducatorUsername("marcelo"));
             loginPage = new EducatorLoginPage();
                 //PageFactoryHelper.GetPage<LoginPage>();
             loginPage.GoToEducatorPortal(portal);
@@ -27,6 +27,7 @@ namespace Test.Steps.UI_Steps
         {
             Console.WriteLine("******> When ");
             welcomePage= loginPage.Login(username, password);
+
         }
         
         [Then(@"validate that the user was successfully logged")]
@@ -37,5 +38,27 @@ namespace Test.Steps.UI_Steps
             Console.WriteLine("******> Then ");
             //ScenarioContext.Current.Pending();
         }
+
+        [When(@"user clicks on signout link")]
+        public void WhenUserClicksOnSignoutLink()
+        {
+            //ScenarioContext.Current.Pending();
+            loginPage = welcomePage.ClickSignOut();
+        }
+
+        [Then(@"validate that user is signed out and is directed to login page\.")]
+        public void ThenValidateThatUserIsSignedOutAndIsDirectedToLoginPage_()
+        {
+            //ScenarioContext.Current.Pending();
+            loginPage.IsElementDisplayed(loginPage.BtnLogin).Should().Be(true);
+        }
+
+        [Then(@"Validate (.*) reviews waiting to be completed button is displayed")]
+        public void ThenValidateReviewsWaitingToBeCompleted(int numberOfReviewsPending)
+        {
+           welcomePage.BtnReviewPending.Text.Should().Contain(numberOfReviewsPending.ToString());
+        }
+
+
     }
 }

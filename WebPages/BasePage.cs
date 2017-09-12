@@ -7,7 +7,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace WebPages
 {
-    public abstract class BasePage    {
+    public class BasePage    {
         protected static IWebDriver driver;
 
         protected BasePage(){
@@ -17,6 +17,12 @@ namespace WebPages
 
         public void GoToSite(string WebUrl){
             Driver.Get().Navigate().GoToUrl(WebUrl);
+        }
+
+        public bool IsElementDisplayed(IWebElement element)
+        {
+            //Add WebdriverWait for element
+            return (element.Displayed);
         }
     }
 }

@@ -14,6 +14,19 @@ namespace WebPages
         public EducatorWelcomePage() {
         }
 
+        #region WebElements
+        [FindsBy(How = How.XPath, Using = "//a[@title='Sign Out']")]
+        public IWebElement LinkSignOut { get; private set; }
+
+        [FindsBy(How = How.Id, Using = "ctl00_conBody_lnkReviewCount")]
+        public IWebElement BtnReviewPending { get; private set; }
+        
+        #endregion
+
+        public EducatorLoginPage ClickSignOut() {
+            LinkSignOut.Click();
+            return new EducatorLoginPage();
+        }
         private EdgenuityHeader edgenuityHeader = null;
         public EdgenuityHeader EHeader
 
@@ -30,24 +43,13 @@ namespace WebPages
 
         public bool IsLoad() {
 
-            CloseIfIsShowedPopUpOpenedSession();
+            
          
             bool labelIsPresent = EHeader.LabelLoggedUser.Displayed;
             bool navigationIsPresent = EHeader.NavigationPanel.Displayed;
             Console.WriteLine("Elements are present?: "+labelIsPresent+"/"+navigationIsPresent);
             return labelIsPresent && navigationIsPresent;
         }
-        public static bool CloseIfIsShowedPopUpOpenedSession(){
-            try {
-                IWebElement buttonContinueIsLoggedUser = driver.FindElement(By.Name("continue"));
-                buttonContinueIsLoggedUser.Click();
-                Console.WriteLine("Closed popup 'Is Logged the user' successfully!");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("The popup 'Is Logged the user' was NOT showed!");
-            }
-            return true;
-        }
+ 
     }
 }

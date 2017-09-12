@@ -53,21 +53,28 @@
     <Reference Include="TechTalk.SpecFlow, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.2.2.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\API_Steps\ValidateAPISteps.cs" />
     <Compile Include="Steps\UI_Steps\ContactPageSteps.cs" />
-    <Compile Include="Steps\UI_Steps\EducatorLoginSteps.cs" />
+    <Compile Include="Steps\UI_Steps\Educator\EducatorLoginSteps.cs" />
+    <Compile Include="Steps\UI_Steps\Student\StudentLoginSteps.cs" />
     <Compile Include="Stories\API_Features\ValidateAPIFeature.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidateAPIFeature.feature</DependentUpon>
     </Compile>
-    <Compile Include="Stories\UI_Features\EducatorLogin.feature.cs">
+    <Compile Include="Stories\UI_Features\Educator\EducatorLogin.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EducatorLogin.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Stories\UI_Features\Student\StudentLogin.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentLogin.feature</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -81,9 +88,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ValidateAPIFeature.feature.cs</LastGenOutput>
     </None>
-    <None Include="Stories\UI_Features\EducatorLogin.feature">
+    <None Include="Stories\UI_Features\Educator\EducatorLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EducatorLogin.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Stories\UI_Features\Student\StudentLogin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>StudentLogin.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -107,5 +118,6 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
