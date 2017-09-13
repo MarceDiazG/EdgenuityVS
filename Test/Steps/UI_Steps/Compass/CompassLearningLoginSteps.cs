@@ -11,7 +11,7 @@ namespace Test.Steps.UI_Steps.Compass
     public class LoginIntoCompassLearningPortalSteps
     {
         CompassLearningLoginPage compassLearningLoginPage;
-        StudentCompassWelcomePage studentCompassWelcomePage;
+        CompassStudentWelcomePage studentCompassWelcomePage;
 
         [Given(@"Login into (.*) portal")]
         public void GivenGoingToCompassLoginPage(string portal)
@@ -31,7 +31,10 @@ namespace Test.Steps.UI_Steps.Compass
         {
             Console.WriteLine("******> Then ");
             bool theBoolean = true;
-            theBoolean.Should().Be(studentCompassWelcomePage.IsLoad());
+
+            //Check that Logout Button is showed 
+            theBoolean.Should().Be(studentCompassWelcomePage.SwitchToNewOpenedWindow());
+            
         }
     }
 }

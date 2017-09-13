@@ -74,6 +74,7 @@ namespace WebPages.Compass
         /// <param name="school"></param>
         public void EnterSchool(string school)
         {
+            TxtSchool.Clear();
             TxtSchool.SendKeys(school);
         }
 
@@ -84,14 +85,20 @@ namespace WebPages.Compass
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns>StudentCompassWelcomePage</returns>
-        public StudentCompassWelcomePage Login(string username)
+        public CompassStudentWelcomePage Login(string username)
         {
             EnterUserName(username);
             EnterPassword("x");
             EnterSchool("qa");
             ClickLogin();
             UserLoggedPopUp.CloseIfIsShowedPopUpOpenedSession();
-            return new StudentCompassWelcomePage();
+            return new CompassStudentWelcomePage();
+        }
+
+        public bool IsLoad() {
+            //Wait until the element is clickable/visible or use the findelement inside the method
+            IWebElement txt = driver.FindElement(By.Id("UserNameEntry"));
+            return txt.Displayed;
         }
     }
 }

@@ -50,7 +50,7 @@
     <Compile Include="BasePage.cs" />
     <Compile Include="Common\UserLoggedPopUp.cs" />
     <Compile Include="Compass\CompassLearningLoginPage.cs" />
-    <Compile Include="Compass\StudentCompassWelcomePage.cs" />
+    <Compile Include="Compass\CompassStudentWelcomePage.cs" />
     <Compile Include="ContactPage.cs" />
     <Compile Include="EdgenuityHeader.cs" />
     <Compile Include="Educator\EducatorLoginPage.cs" />
