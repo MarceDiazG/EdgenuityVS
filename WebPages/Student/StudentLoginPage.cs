@@ -30,7 +30,7 @@ namespace WebPages {
         #endregion
 
         public void GoToStudentPortal(string portal){
-            GoToSite(DataAccess.getEnvironmentURL(portal));
+            GoToSite(DataAccess.GetEnvironmentURL(portal));
         }
 
         /// <summary>

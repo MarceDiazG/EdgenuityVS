@@ -8,6 +8,7 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using DB_Layer;
+using WebPages.Common;
 
 namespace WebPages {
     public class EducatorLoginPage : BasePage {
@@ -30,7 +31,7 @@ namespace WebPages {
         #endregion
 
         public void GoToEducatorPortal(string portal){
-            GoToSite(DataAccess.getEnvironmentURL(portal));
+            GoToSite(DataAccess.GetEnvironmentURL(portal));
         }
 
         /// <summary>
@@ -73,6 +74,8 @@ namespace WebPages {
         {
             EnterUserName(username);
             EnterPassword(password);
+            UtilsPages.elementHighlight(BtnLogin, driver);
+
             ClickLogin();
             CloseIfIsShowedPopUpOpenedSession();
             return new EducatorWelcomePage();

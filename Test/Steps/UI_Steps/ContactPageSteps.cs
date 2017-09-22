@@ -1,7 +1,6 @@
 ﻿using EdgeWebDriver;
 using System;
 using TechTalk.SpecFlow;
-using Test.Stories;
 using WebPages;
 
 namespace Test.Steps

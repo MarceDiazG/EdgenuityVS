@@ -5,7 +5,7 @@
 @mytag
 Scenario: Succesfull Family login and logout
 	Given Go to QA_Family FamilyPortal
-	When Login using chetanTeach and chetan credentials
+	When Login using Divya and xcredentials
 	Then validate that the user was successfully logged into Family
-	When user clicks on signout buttton
-	Then validate that user is successfully signed out
+	And user clicks on signout buttton
+	And validate that user is successfully signed out

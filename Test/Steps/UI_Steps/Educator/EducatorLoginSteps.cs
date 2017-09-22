@@ -16,7 +16,6 @@ namespace Test.Steps.UI_Steps
         public void GivenGoingToEducatorPortal(string portal)
         {
             Console.WriteLine("+++++ > portal");
-            //Console.WriteLine("My data:" + DataAccess.GetEducatorUsername("marcelo"));
             loginPage = new EducatorLoginPage();
                 //PageFactoryHelper.GetPage<LoginPage>();
             loginPage.GoToEducatorPortal(portal);
@@ -36,20 +35,17 @@ namespace Test.Steps.UI_Steps
             bool theBoolean = true;
             theBoolean.Should().Be(welcomePage.IsLoad());
             Console.WriteLine("******> Then ");
-            //ScenarioContext.Current.Pending();
         }
 
         [When(@"user clicks on signout link")]
         public void WhenUserClicksOnSignoutLink()
         {
-            //ScenarioContext.Current.Pending();
             loginPage = welcomePage.ClickSignOut();
         }
 
         [Then(@"validate that user is signed out and is directed to login page\.")]
         public void ThenValidateThatUserIsSignedOutAndIsDirectedToLoginPage_()
         {
-            //ScenarioContext.Current.Pending();
             loginPage.IsElementDisplayed(loginPage.BtnLogin).Should().Be(true);
         }
 

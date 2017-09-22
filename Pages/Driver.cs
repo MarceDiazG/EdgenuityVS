@@ -7,12 +7,15 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.PhantomJS;
 using DB_Layer;
+using log4net;
+using log4net.Config;
 
 namespace EdgeWebDriver
 {
     public class Driver
     {
         private static ThreadLocal<IWebDriver> driverStore = new ThreadLocal<IWebDriver>();
+        private static readonly ILog log = LogManager.GetLogger(typeof(Driver));
 
         public static IWebDriver Get()
         {
@@ -26,9 +29,8 @@ namespace EdgeWebDriver
 
         public static void Initialize(Browsers type)
         {
-            /*WebProxy proxyObject = new WebProxy("10.120.2.251", 3128);
-            WebRequest req = WebRequest.Create("https://auth.qa.edgenuity.com/Login/Login/Educator");
-            req.Proxy = proxyObject;*/
+            BasicConfigurator.Configure();
+            log.Info("Initializing driver....");
             switch (type)
             {
                 case Browsers.Firefox:
@@ -53,7 +55,7 @@ namespace EdgeWebDriver
 
         public static void Navigate()
         {
-            Get().Navigate().GoToUrl(DataAccess.getEnvironmentURL("QA_Educator"));
+            Get().Navigate().GoToUrl(DataAccess.GetEnvironmentURL("QA_Educator"));
         }
 
         public static void Close()
@@ -64,6 +66,10 @@ namespace EdgeWebDriver
         private static void TurnOnWait()
         {
             Get().Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+        }
+        public static void TurnOnWait(int seconds)
+        {
+            Get().Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(seconds));
         }
     }
 

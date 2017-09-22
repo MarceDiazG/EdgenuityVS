@@ -4,7 +4,7 @@
 	I want to login in Educator Portal 
 
 @educator
-Scenario: Succesfull Educator login and logout
+Scenario: Succesfull Educator login and logout 
 	Given Going to QA_Educator Portal
 	When Login with chetanTeach and chetan credentials
 	Then validate that the user was successfully logged

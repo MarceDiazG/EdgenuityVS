@@ -17,13 +17,14 @@ namespace Test.Steps.UI_Steps.Family
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"Login using chetanTeach and chetan credentials")]
-        public void WhenLoginUsingChetanTeachAndChetanCredentials()
+        [When(@"Login using (.*) and (.*) credentials")]
+        public void WhenLoginUsingChetanTeachAndChetanCredentials(string username, string password)
         {
+            //if 
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user clicks on signout buttton")]
+        [Then(@"user clicks on signout buttton")]
         public void WhenUserClicksOnSignoutButtton()
         {
             ScenarioContext.Current.Pending();

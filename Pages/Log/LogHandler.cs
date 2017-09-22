@@ -92,6 +92,20 @@ namespace EdgeWebDriver.Log {
             }
         }
 
+
+        /// <summary>
+        /// Log information with DEBUG level.
+        /// </summary>
+        /// <param name="message">the message to be logged</param>
+        public static void Debug(string message)
+        {
+            if (enabled)
+            {
+                logger.Debug(message);
+            }
+        }
+
+
         /// <summary>
         /// Gets the log file path.
         /// </summary>

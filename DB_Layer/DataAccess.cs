@@ -19,7 +19,7 @@ namespace DB_Layer
         {
             Console.WriteLine("---> In GetEducatorUsername");
             XmlDocument _document = new XmlDocument();
-            byte[] bytes = File.ReadAllBytes("C:/w/EdgenuityFmwk/WebPage/DB_Layer/UsersRoles.xml");
+            byte[] bytes = File.ReadAllBytes("C:/w/automation-test-system/DB_Layer/UsersRoles.xml");
             string xml = Encoding.UTF8.GetString(bytes);
             try
             {
@@ -46,9 +46,10 @@ namespace DB_Layer
         /// Method used to obtain the url related to the parameter being sent
         /// </summary>
         /// <param name="portal"></param>
-        /// <returns></returns>
-        public static string getEnvironmentURL(string portal)
+        /// <returns>string</returns>
+        public static string GetEnvironmentURL(string portal)
         {
+            Console.WriteLine("------->"+portal);
             switch (portal)
             {
                 case "QA_Educator":
@@ -57,7 +58,7 @@ namespace DB_Layer
                     return "https://auth.qa.edgenuity.com/Login/Login/Student";
                 case "QA_Family":
                     return "https://auth.qa.edgenuity.com/Login/Login/family";
-                case "QA_CompassLearning":
+                case "QA_Odyssey":
                     return "https://qaodypublic.compasslearning.com";
             }
             return null;
